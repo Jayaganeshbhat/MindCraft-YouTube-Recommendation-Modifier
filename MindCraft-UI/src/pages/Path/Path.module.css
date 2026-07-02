@@ -1,0 +1,27 @@
+.markdown {
+    --link-color: var(--mantine-color-blue-3);
+}
+
+.markdown pre {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-wrap: break-word;
+}
+
+.markdown code,
+.markdown p {
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+.markdown pre code {
+    white-space: inherit;
+}
+
+.markdown.lightMode {
+    --link-color: var(--mantine-color-blue-9);
+}
+
+.markdown a {
+    color: var(--link-color);
+}

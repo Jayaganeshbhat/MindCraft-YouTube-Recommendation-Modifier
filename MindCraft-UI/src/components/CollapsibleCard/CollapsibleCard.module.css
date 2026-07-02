@@ -1,0 +1,41 @@
+.card {
+  border: 1px solid var(--mantine-color-gray-8);
+  border-radius: var(--mantine-radius-md);
+  padding: 0.75rem 1rem;
+  min-width: 300px;
+  width: fit-content;
+  background-color: var(--mantine-color-dark-7);
+  transition: background-color 0.2s ease;
+}
+
+.card:hover {
+  background-color: var(--mantine-color-dark-6);
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chevron {
+  transition: transform 0.25s ease;
+}
+
+.opened {
+  transform: rotate(180deg);
+}
+
+.panel {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.panelOpened {
+  max-height: 400px; /* adjust depending on content */
+  opacity: 1;
+  margin-top: 0.5rem;
+}

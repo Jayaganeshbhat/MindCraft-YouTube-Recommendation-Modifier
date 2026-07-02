@@ -1,0 +1,108 @@
+.homeHeader {
+  position: fixed;
+  height: 64px;
+  white-space: nowrap;
+  transition: background-color 0.25s;
+  backdrop-filter: blur(10px);
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+.headerIconLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  color: #98989f;
+  transition: color 0.5s;
+}
+
+.headerIconLinks span {
+  width: 20px;
+  height: 20px;
+  fill: #98989f;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  background-color: #98989f;
+  color: inherit;
+}
+
+.githubIcon {
+  -webkit-mask: url('/images/github.svg') no-repeat;
+  mask: url('/images/github.svg') no-repeat;
+}
+
+.homeContainer {
+  background:
+    url(/images/noise.GcUVZ9sd.webp),
+    radial-gradient(
+      circle at right center,
+      #4b296980,
+      #563277 25%,
+      #4a378c 40%,
+      #4066a8 65%,
+      #32517380
+    );
+  height: 100vh;
+  width: 100vw;
+  mask-image: radial-gradient(
+    ellipse 150% 40% at center center,
+    #000 20%,
+    #00000080 50%,
+    #0000
+  );
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.homeTitle h1,
+.homeTitle h2 {
+  font-size: 72px;
+  letter-spacing: -1.44px;
+  text-align: center;
+  background: linear-gradient(180deg, #fff, #ffffff4f);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-wrap: balance;
+  line-height: 110% !important;
+}
+
+.homeTitle h2 {
+  font-size: 58px;
+}
+
+.homeSubTitle {
+  text-align: center;
+  color: #a9a9a9;
+  font-weight: normal;
+  max-width: 800px;
+  text-wrap: balance;
+  line-height: 150%;
+}
+
+.homePrimaryButton {
+  background:
+    radial-gradient(141.42% 141.42% at 100% 0%, #fff6, #fff0),
+    radial-gradient(140.35% 140.35% at 100% 94.74%, #bd34fe, #bd34fe00),
+    radial-gradient(89.94% 89.94% at 18.42% 15.79%, #41d1ff, #41d1ff00);
+  box-shadow: 0 1px #ffffffbf inset;
+}
+
+.absoluteLottie {
+  position: absolute;
+  opacity: 0.5;
+  z-index: -1;
+ 
+}
+
+.footer,
+.footer a {
+  color: var(--mantine-color-gray-6);
+  text-decoration: none;
+  font-size: var(--mantine-font-size-sm);
+}

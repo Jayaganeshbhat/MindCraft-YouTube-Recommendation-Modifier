@@ -1,0 +1,255 @@
+/* Root layout */
+
+.mf-root {
+    min-height: 100vh;
+    padding: 24px 32px 32px;
+    box-sizing: border-box;
+    background-color: #000000;
+    color: #e5e7eb;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.mf-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* Header */
+
+.mf-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.mf-header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.mf-eyebrow {
+    font-size: 10px;
+    color: #64748b;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.mf-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #e5e7eb;
+}
+
+.mf-subtitle {
+    font-size: 11px;
+    color: #9ca3af;
+    max-width: 520px;
+}
+
+/* Exit button */
+
+.mf-exit-btn {
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 1px solid #111827;
+    background: #020817;
+    color: #9ca3af;
+    font-size: 11px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    transition: all 0.18s ease;
+}
+
+.mf-exit-btn:hover {
+    color: #e5e7eb;
+    border-color: #374151;
+    background: #020817;
+}
+
+.mf-exit-icon {
+    font-size: 13px;
+}
+
+/* Path (learning path) */
+
+.mf-path {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 12px;
+    border-top: 1px solid #1f1f1f;
+}
+
+.mf-path-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.mf-path-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #e5e7eb;
+}
+
+.mf-path-meta {
+    font-size: 11px;
+    color: #6b7280;
+    margin-top: 2px;
+}
+
+.mf-path-tag {
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    color: #22c55e;
+    border: 1px solid rgba(34, 197, 94, 0.18);
+    background: rgba(34, 197, 94, 0.06);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+}
+
+/* Section (per query/topic) */
+
+.mf-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.mf-section-title {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: #f9fafb;
+}
+
+/* Grid & cards */
+
+.mf-grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.mf-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.mf-card {
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 16px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease,
+    border-color 0.2s ease;
+    height: 100%;
+}
+
+.mf-card:hover {
+    transform: scale(1.05);
+    background-color: #1f1f1f;
+    border-color: #111827;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+}
+
+/* Thumbnail */
+
+.mf-card-thumb-wrapper {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.mf-card-thumb {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+}
+
+.mf-card-thumb-placeholder {
+    width: 100%;
+    height: 160px;
+    border-radius: 12px;
+    border: 1px dashed #111827;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #6b7280;
+    background: #020817;
+}
+
+/* Card body */
+
+.mf-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px;
+}
+
+.mf-card-title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #f9fafb;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.mf-card-desc {
+    font-size: 11px;
+    color: #7d7d7d;
+    line-height: 1.4;
+    max-height: 3.9em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.mf-card-meta {
+    font-size: 11px;
+    color: #dbdde1;
+    margin-top: 8px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .mf-root {
+        padding: 16px;
+    }
+
+    .mf-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .mf-exit-btn {
+        align-self: flex-start;
+    }
+}

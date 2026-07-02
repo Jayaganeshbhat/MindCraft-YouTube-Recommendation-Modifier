@@ -1,0 +1,9 @@
+.youtubeCard {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.youtubeCard:hover {
+  transform: scale(1.05);
+  background: var(--mantine-color-dark-8) !important;
+}

@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Mindcraft Learning Paths",
+  "version": "1.0.0",
+  "description": "Focus on your learning paths and tame YouTube distractions.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Mindcraft"
+  },
+  "icons": {
+    "16": "icons/icon128.png",
+    "48": "icons/icon128.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://localhost/*",
+    "*://www.youtube.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["contentScript.js"],
+      "css": ["contentScript.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

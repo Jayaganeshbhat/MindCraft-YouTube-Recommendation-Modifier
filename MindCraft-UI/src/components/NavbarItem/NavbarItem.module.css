@@ -1,0 +1,79 @@
+.navLink {
+  border-radius: var(--mantine-radius-md);
+  color: var(--mantine-color-gray-0);
+  white-space: nowrap;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+
+  position: relative;
+}
+
+.navLink:hover {
+  background-color: var(--mantine-color-dark-6);
+}
+
+.active {
+  background-color: var(--mantine-color-gray-9);
+  color: var(--mantine-color-violet-4);
+}
+
+.navIcon {
+  border-radius: var(--mantine-radius-md);
+  text-decoration: none;
+  color: var(--mantine-color-gray-6);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--mantine-spacing-sm);
+}
+
+.navIcon:hover {
+  background-color: var(--mantine-color-dark-6);
+}
+
+.activeIcon {
+  background-color: var(--mantine-color-gray-9);
+  color: var(--mantine-color-violet-6);
+}
+
+.activeIcon:hover {
+  background-color: var(--mantine-color-gray-8);
+}
+
+.danger {
+  color: var(--mantine-color-red-5);
+}
+
+.danger:hover {
+  background-color: var(--mantine-color-dark-6);
+  color: var(--mantine-color-red-4);
+}
+
+.dangerActive {
+  background-color: var(--mantine-color-red-9);
+  color: var(--mantine-color-red-3);
+}
+
+.dangerActive:hover {
+  background-color: var(--mantine-color-red-8);
+}
+
+.trashIcon {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none; /* ensures it doesn’t block hover when hidden */
+}
+
+.navLink:hover .trashIcon {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.alwaysVisible {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
