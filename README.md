@@ -45,18 +45,6 @@ MindCraft/
 
 ---
 
-## Screenshots
-
-(Add screenshots here)
-
----
-
-## Demo
-
-(Add video later)
-
----
-
 ## Future Improvements
 
 - RAG-powered recommendations
